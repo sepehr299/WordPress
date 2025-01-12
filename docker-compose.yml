@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  wordpress:
+    build: .
+    ports:
+      - "8080:80"
+    environment:
+      WORDPRESS_DB_HOST: dbetesami:3306
+      WORDPRESS_DB_NAME: shetakco_Buy
+      WORDPRESS_DB_USER: shetakco_Buy
+      WORDPRESS_DB_PASSWORD: kJ&f3#4A%TM
+    volumes:
+      - ./wp-content:/var/www/html/wp-content
