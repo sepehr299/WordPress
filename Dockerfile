@@ -10,9 +10,9 @@ RUN apt-get update && apt-get install -y \
     && docker-php-ext-install soap gd
 
 # Set permissions for wp-content
-RUN chown -R www-data:www-data /var/www/html/wp-content \
-    && find /var/www/html/wp-content -type f -exec chmod 644 {} \; \
-    && find /var/www/html/wp-content -type d -exec chmod 755 {} \;
+RUN chown -R www-data:www-data /var/www/html/wp-content && \
+    find /var/www/html/wp-content -type f -exec chmod 644 {} \; && \
+    find /var/www/html/wp-content -type d -exec chmod 755 {} \;
 #123
 # Set environment variables
 ENV WORDPRESS_DB_HOST=dbetesami:3306
